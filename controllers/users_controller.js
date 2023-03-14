@@ -1,16 +1,24 @@
 const User = require('../models/user');
 module.exports.profile = function (req,res){
 
-    return res.render('users',{title:'users dummy page'});
+    return res.render('users',{title:'users profile dummy page'});
 }
 
 module.exports.signUp = function(req,res){
+    //if user has already logged in,take user to profile
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
     return res.render('user_sign_up',{
         title: "community | sign up"
     })
 }
 
 module.exports.signIn = function(req,res){
+    //if user has already logged in,take user to profile
+    if(req.isAuthenticated()){
+        return res.redirect('/users/profile');
+    }
     return res.render('user_sign_in',{
         title: "community | sign in"
     })
@@ -41,5 +49,15 @@ module.exports.create = function(req,res){
 }
 //sign in and create session
 module.exports.createSession = function(req,res){
+return res.redirect('/');
+}
 
+module.exports.destroySession = function(req,res){
+
+        req.logout(function(err) {
+            if (err) { return next(err); }
+            return res.redirect('/');
+          });
+    //passport gives this function to req
+    //return res.redirect('/');
 }
