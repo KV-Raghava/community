@@ -1,0 +1,20 @@
+header {
+  background-color: #303030;
+  position: fixed;
+  color: white;
+  height: 4vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0; }
+  header a {
+    color: white;
+    text-decoration: none; }
+  header #left {
+    margin-left: 0.5vw;
+    font-weight: bold;
+    font-size: 1.9vw; }
+  header #right {
+    margin-right: 0.5vw;
+    font-size: 1.4vw; }

@@ -1,0 +1,29 @@
+footer 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    //background-color: grey;
+    background-color: #303030;
+    color: white;
+    a
+    {
+        color: white;
+        //text-decoration: overline underline black;
+        // display: block;
+        margin: 5px;
+    
+    
+    }
+    #left
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 25%;
+    }
+ }

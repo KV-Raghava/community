@@ -6,13 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- here / means we are lookin at root level in assets folder-->
     <!-- remeber that in index.js we set express.static('assets') -->
-    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href= "/css/layout.css">
+    <link rel="stylesheet" href = "/css/header.css">
+    <link rel="stylesheet" href = "/css/footer.css">
     <%-style%>
     <title><%=title%></title>
 </head>
 <body>
     <%- include('_header')%>
-    <%- body%>
+    <main id="layout-main">
+        <%- body%>
+    </main>
+    
     <%- include('_footer')%>
     <%- script%>
 </body>

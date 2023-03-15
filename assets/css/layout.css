@@ -1,4 +1,10 @@
-body{
-    margin:0;
-    
-}
+body {
+  margin: 0;
+  background-color: #262626;
+  position: fixed;
+  color: #9ab;
+  top: 5%; }
+  body a {
+    color: white; }
+  body #layout-main {
+    height: 100%; }
