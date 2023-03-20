@@ -23,10 +23,11 @@ module.exports.destroy = function(req,res){
    if (comment.user == req.user.id){
     let postId = comment.post;
     //Comment.findByIdAndDelete(comment._id);
-    comment.remove();
+    //comment.remove();
+    Comment.findByIdAndDelete(req.params.id).then(promise =>{
     post.findByIdAndUpdate(postId,{$pull :{comments:req.params.id}}).then(promise=>{
       return res.redirect('back');
-    })
+    })});
    }
    else {return res.redirect('back');}
   }).catch(error => {

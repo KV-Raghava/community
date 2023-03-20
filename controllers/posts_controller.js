@@ -20,10 +20,11 @@ module.exports.destroy =function(req,res){
     Post.findById(req.params.id).then(post =>{
         //.id means converting object id into string format
         if(post.user == req.user.id){
-            post.remove();
-            Comment.deleteMany(req.params.id).then(promise=>{
+            //post.remove();
+            Post.findByIdAndDelete(req.params.id).then(promise => {
+            Comment.deleteMany({post :req.params.id}).then(promise=>{
                 return res.redirect('back');
-            });
+            })});
         }
         else{
             return res.redirect('back');
