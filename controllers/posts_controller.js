@@ -9,9 +9,11 @@ module.exports.create = function(req, res){
         content: req.body.content,
         user: req.user._id
     }).then(user=>{
+        req.flash('success','post published!');
         return res.redirect('back');
     }).catch(error=>{
-        console.log('error in creating a post');
+        //console.log('error in creating a post');
+        req.flash('error',error);
          return;
     })
 }
@@ -23,6 +25,7 @@ module.exports.destroy =function(req,res){
             //post.remove();
             Post.findByIdAndDelete(req.params.id).then(promise => {
             Comment.deleteMany({post :req.params.id}).then(promise=>{
+                req.flash('success','post deleted');
                 return res.redirect('back');
             })});
         }

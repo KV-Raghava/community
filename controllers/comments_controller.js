@@ -10,6 +10,7 @@ module.exports.create = function(req,res){
         console.log(comment);
         post.comments.push(comment);
         post.save();
+        req.flash('success','comment added!');
         res.redirect('/');
       })
   }).catch(error => {
@@ -26,12 +27,16 @@ module.exports.destroy = function(req,res){
     //comment.remove();
     Comment.findByIdAndDelete(req.params.id).then(promise =>{
     post.findByIdAndUpdate(postId,{$pull :{comments:req.params.id}}).then(promise=>{
+      req.flash('success','comment deleted')
       return res.redirect('back');
     })});
    }
-   else {return res.redirect('back');}
+   else {
+  
+    return res.redirect('back');}
   }).catch(error => {
-    console.log(`error in deleting comment:${error}`);
+    //console.log(`error in deleting comment:${error}`);
+    req.flash('error',error);
     return;
   })
 }
