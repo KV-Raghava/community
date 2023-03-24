@@ -5,6 +5,7 @@ const User = require('../models/user');
 module.exports.home = function(req,res){
     //console.log(req.cookies);
     Post.find({})
+    .sort('-createdAt')
     .populate('user')
     .populate({
         path:'comments',

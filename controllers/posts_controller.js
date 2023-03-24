@@ -36,6 +36,15 @@ module.exports.destroy =async function(req,res){
             
             await Post.findByIdAndDelete(req.params.id);
             await Comment.deleteMany({post :req.params.id});
+            //sending response to xhr request
+            if(req.xhr){
+                return res.status(200).json({
+                    data:{
+                        post_id: req.params.id
+                    },
+                    message:'post deleted'
+                });
+            }
             req.flash('success','post deleted');
             return res.redirect('back');
             
@@ -45,7 +54,7 @@ module.exports.destroy =async function(req,res){
             return res.redirect('back');
         }
     }catch(error){
-        console.log(`error:${error}`);
+        console.log(`error in deleting post:${error}`);
         return res.redirect('back');
     }
     
