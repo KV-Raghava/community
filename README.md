@@ -49,7 +49,7 @@ The server will start running on the specified port (default is 3000).
 ## Configuration
 Database
 The application uses MongoDB for data storage. The connection is established in the config/mongoose.js file:
-
+```
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/community_development');
 const db = mongoose.connection;
@@ -57,10 +57,10 @@ db.on('error', console.error.bind(console, "error: connecting to db"));
 db.once('open', function() {
     console.log("connected to db successfully");
 });
-
+```
 Session Management
 Sessions are managed using express-session and stored in MongoDB using connect-mongo:
-
+```
 app.use(session({
     name: 'community',
     secret: 'filler', // Change this secret before deploying
@@ -76,10 +76,10 @@ app.use(session({
         console.log(err || 'connect-mongodb setup ok');
     })
 }));
-
+```
 SCSS Middleware
 The application uses node-sass-middleware to compile SCSS files to CSS:
-
+```
 app.use(sassMiddleware({
     src: './assets/scss',
     dest: './assets/css',
@@ -87,7 +87,7 @@ app.use(sassMiddleware({
     outputStyle: 'extended',
     prefix: '/css'
 }));
-
+```
 Folder Structure
 models/: Contains Mongoose models for User and Post.
 routes/: Contains route definitions.
