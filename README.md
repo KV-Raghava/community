@@ -98,7 +98,7 @@ assets/: Contains static files like CSS, JS, and images.
 ## Usage
 Home Page
 The home page displays a list of posts and users. It fetches posts and users from the database and renders them using EJS templates:
-
+```
 module.exports.home = function(req, res) {
     Post.find({})
     .sort('-createdAt')
@@ -120,7 +120,7 @@ module.exports.home = function(req, res) {
         return;
     });
 };
-
+```
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
