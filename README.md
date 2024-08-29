@@ -12,13 +12,13 @@ Modular code structure
 ## Technologies Used
 - Node.js 
 - Express.js
-MongoDB
-Mongoose
-EJS (Embedded JavaScript templates)
-SCSS (Sass)
-Passport.js (for authentication)
-Connect-flash (for flash messages)
-Connect-mongo (for session storage)
+- MongoDB
+- Mongoose
+- EJS (Embedded JavaScript templates)
+- SCSS (Sass)
+- Passport.js (for authentication)
+- Connect-flash (for flash messages)
+- Connect-mongo (for session storage)
 ## Installation
 Clone the repository:
 
