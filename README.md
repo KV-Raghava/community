@@ -47,7 +47,7 @@ npm start
 The server will start running on the specified port (default is 3000).
 
 ## Configuration
-Database
+### Database
 The application uses MongoDB for data storage. The connection is established in the config/mongoose.js file:
 ```
 const mongoose = require('mongoose');
@@ -58,7 +58,7 @@ db.once('open', function() {
     console.log("connected to db successfully");
 });
 ```
-Session Management
+### Session Management
 Sessions are managed using express-session and stored in MongoDB using connect-mongo:
 ```
 app.use(session({
@@ -77,7 +77,7 @@ app.use(session({
     })
 }));
 ```
-SCSS Middleware
+### SCSS Middleware
 The application uses node-sass-middleware to compile SCSS files to CSS:
 ```
 app.use(sassMiddleware({
@@ -88,14 +88,14 @@ app.use(sassMiddleware({
     prefix: '/css'
 }));
 ```
-Folder Structure
+### Folder Structure
 models/: Contains Mongoose models for User and Post.
 routes/: Contains route definitions.
 controllers/: Contains controller functions for handling requests.
 config/: Contains configuration files for middleware and database.
 views/: Contains EJS templates for rendering HTML.
 assets/: Contains static files like CSS, JS, and images.
-Usage
+## Usage
 Home Page
 The home page displays a list of posts and users. It fetches posts and users from the database and renders them using EJS templates:
 
@@ -121,13 +121,13 @@ module.exports.home = function(req, res) {
     });
 };
 
-Contributing
+## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your changes.
 
-License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Contact
+## Contact
 For any questions or suggestions, please open an issue or contact the repository owner.
 
 Thank you for using the Community Development Project!
