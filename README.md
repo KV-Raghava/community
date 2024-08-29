@@ -120,7 +120,6 @@ project-root/
 ├── app.js                 # Main application file
 ├── package.json           # NPM package file
 └── README.md              # Project documentation
-
 models/: Contains Mongoose models for User and Post.
 routes/: Contains route definitions.
 controllers/: Contains controller functions for handling requests.
