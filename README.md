@@ -1,4 +1,4 @@
-# community Development Project
+# Community Development Project
 ## Overview
 This project is a community development platform built using Node.js, Express, MongoDB, and other related technologies. It allows users to create posts, comment on them, and interact with other users in the community.
 
