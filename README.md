@@ -10,8 +10,8 @@ Session management with MongoDB
 SCSS support for styling
 Modular code structure
 ## Technologies Used
-Node.js
-Express.js
+- Node.js 
+- Express.js
 MongoDB
 Mongoose
 EJS (Embedded JavaScript templates)
