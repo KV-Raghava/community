@@ -29,7 +29,9 @@ cd community-development
 
 Install dependencies:
 
+```
 npm install
+```
 
 Set up MongoDB:
 
@@ -37,11 +39,14 @@ Make sure MongoDB is installed and running on your machine. The application conn
 
 Run the application:
 
+```
 npm start
+
+```
 
 The server will start running on the specified port (default is 3000).
 
-Configuration
+## Configuration
 Database
 The application uses MongoDB for data storage. The connection is established in the config/mongoose.js file:
 
