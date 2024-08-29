@@ -23,7 +23,7 @@ Connect-mongo (for session storage)
 Clone the repository:
 
 ``` git clone https://github.com/yourusername/community-development.git
-cd community-development ```
+cd community-development 
 
 Install dependencies:
 
