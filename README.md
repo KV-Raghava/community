@@ -89,8 +89,37 @@ app.use(sassMiddleware({
 }));
 ```
 ### Folder Structure
-. ├── assets │ ├── css │ └── scss ├── config │ └── middleware.js ├── models │ └── user.js ├── routes │ └── index.js ├── uploads ├── views │ ├── layout.ejs │ └── index.ejs ├── app.js ├── package.json └── README.md
-
+project-root/
+│
+├── config/
+│   └── config.js          # Configuration files (e.g., database config)
+│
+├── controllers/
+│   └── userController.js  # Controller for user-related logic
+│
+├── middlewares/
+│   └── authMiddleware.js  # Middleware for authentication
+│
+├── models/
+│   └── user.js            # Mongoose user schema and model
+│
+├── routes/
+│   └── userRoutes.js      # Routes for user-related endpoints
+│
+├── uploads/
+│   └── users/
+│       └── avatars/       # Directory for storing user avatars
+│
+├── utils/
+│   └── fileHelper.js      # Utility functions for file handling
+│
+├── views/
+│   └── index.ejs          # EJS templates for rendering views
+│
+├── .gitignore             # Git ignore file
+├── app.js                 # Main application file
+├── package.json           # NPM package file
+└── README.md              # Project documentation
 
 models/: Contains Mongoose models for User and Post.
 routes/: Contains route definitions.
