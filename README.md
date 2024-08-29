@@ -89,6 +89,9 @@ app.use(sassMiddleware({
 }));
 ```
 ### Folder Structure
+. ├── assets │ ├── css │ └── scss ├── config │ └── middleware.js ├── models │ └── user.js ├── routes │ └── index.js ├── uploads ├── views │ ├── layout.ejs │ └── index.ejs ├── app.js ├── package.json └── README.md
+
+
 models/: Contains Mongoose models for User and Post.
 routes/: Contains route definitions.
 controllers/: Contains controller functions for handling requests.
