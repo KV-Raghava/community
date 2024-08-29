@@ -1,15 +1,15 @@
-## Community Development Project
-# Overview
+# community Development Project
+## Overview
 This project is a community development platform built using Node.js, Express, MongoDB, and other related technologies. It allows users to create posts, comment on them, and interact with other users in the community.
 
-Features
+## Features
 User Authentication
 Create, Read, Update, and Delete (CRUD) operations for posts and comments
 Flash messages for notifications
 Session management with MongoDB
 SCSS support for styling
 Modular code structure
-Technologies Used
+## Technologies Used
 Node.js
 Express.js
 MongoDB
@@ -19,11 +19,11 @@ SCSS (Sass)
 Passport.js (for authentication)
 Connect-flash (for flash messages)
 Connect-mongo (for session storage)
-Installation
+## Installation
 Clone the repository:
 
-git clone https://github.com/yourusername/community-development.git
-cd community-development
+``` git clone https://github.com/yourusername/community-development.git
+cd community-development ```
 
 Install dependencies:
 
